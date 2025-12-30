@@ -523,16 +523,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const shareButtons = `
       <div class="share-buttons">
         <span class="share-label">Share:</span>
-        <button class="share-btn share-twitter" data-activity="${name}" title="Share on Twitter">
+        <button class="share-btn share-twitter" title="Share on Twitter">
           <span class="share-icon">🐦</span>
         </button>
-        <button class="share-btn share-facebook" data-activity="${name}" title="Share on Facebook">
+        <button class="share-btn share-facebook" title="Share on Facebook">
           <span class="share-icon">📘</span>
         </button>
-        <button class="share-btn share-linkedin" data-activity="${name}" title="Share on LinkedIn">
+        <button class="share-btn share-linkedin" title="Share on LinkedIn">
           <span class="share-icon">💼</span>
         </button>
-        <button class="share-btn share-email" data-activity="${name}" title="Share via Email">
+        <button class="share-btn share-email" title="Share via Email">
           <span class="share-icon">✉️</span>
         </button>
       </div>
@@ -908,8 +908,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function shareOnLinkedIn(activityName, details) {
     const url = window.location.href;
-    const title = `${activityName} at Mergington High School`;
-    const summary = details.description;
     const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
     window.open(linkedInUrl, '_blank', 'width=550,height=420');
   }
